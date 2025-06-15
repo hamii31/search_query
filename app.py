@@ -15,6 +15,9 @@ with open('label_encoder.pkl', 'rb') as f:
 
 max_seq_len = 50 
 
+@app.route('/')
+def home():
+    return jsonify({"message": "API is live!"})
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -40,4 +43,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=5001, debug=False)
