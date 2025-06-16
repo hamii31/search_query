@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-model = load_model('rnn_model_v1.2.keras')
+model = load_model('rnn_model_v2.2.keras')
 
 with open('tokenizer.pkl', 'rb') as f:
     tokenizer = pickle.load(f)
