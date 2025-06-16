@@ -15,6 +15,10 @@ with open('label_encoder.pkl', 'rb') as f:
 
 max_seq_len = 50 
 
+@app.route('/ping')
+def ping():
+    return "pong",200
+
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
@@ -39,4 +43,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5001, debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)
