@@ -5,12 +5,12 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-model = load_model('rnn_model_v2.2.keras')
+model = load_model('rnn_model_v4.4.4.keras')
 
-with open('tokenizer.pkl', 'rb') as f:
+with open('tokenizer_v4.4.4.pkl', 'rb') as f:
     tokenizer = pickle.load(f)
 
-with open('label_encoder.pkl', 'rb') as f:
+with open('label_encoder_v4.4.4.pkl', 'rb') as f:
     label_encoder = pickle.load(f)
 
 max_seq_len = 50 
